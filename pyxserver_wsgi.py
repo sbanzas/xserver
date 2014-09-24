@@ -95,7 +95,9 @@ def to_dict(result):
     # TODO: replace with mako template
     esc = cgi.escape
     if result[1]:
-        long_desc = u'<p>{0}</p>'.format(esc(result[1]))
+        #The original line was commented just to adapt the original code to the system needs.
+        #long_desc = u'<p>{0}</p>'.format(esc(result[1]))
+        long_desc = u'<iframe src="{0}" width="540px" height="400px" frameborder="0" scrolling="no"></iframe>'.format(result[1])
     else:
         long_desc = u''
     return {'short-description': esc(result[0]),
